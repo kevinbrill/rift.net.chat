@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>$author$</authors>
+    <owners>$author$</owners>
+    <licenseUrl>http://www.gnu.org/licenses/gpl-2.0.html</licenseUrl>
+    <projectUrl>http://github.com/kevinbrill/rift.net.chat</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>$description$</description>
+    <releaseNotes>Initial release</releaseNotes>
+    <copyright>Copyright 2015 Kevin Brill</copyright>
+    <tags>Gaming MMO</tags>
+	<dependencies> 
+   		<dependency id="rift.net" />
+   	</dependencies> 
+  </metadata>
+</package>
