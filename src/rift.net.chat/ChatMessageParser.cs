@@ -1,5 +1,5 @@
-﻿using RestSharp;
-using rift.net.chat.rest;
+﻿using rift.net.chat.rest;
+using RestSharp;
 
 namespace rift.net.chat
 {
