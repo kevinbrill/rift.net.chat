@@ -14,7 +14,7 @@
     <copyright>Copyright 2015 Kevin Brill</copyright>
     <tags>Gaming MMO</tags>
 	<dependencies> 
-   		<dependency id="rift.net" />
+   		<dependency id="rift.net" version="1.5"/>
    	</dependencies> 
   </metadata>
 </package>

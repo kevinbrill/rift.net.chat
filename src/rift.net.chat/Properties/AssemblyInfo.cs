@@ -5,11 +5,11 @@ using System.Runtime.CompilerServices;
 // Change them to the values specific to your project.
 
 [assembly: AssemblyTitle ("rift.net.chat")]
-[assembly: AssemblyDescription ("")]
+[assembly: AssemblyDescription ("A .net wrapper for Trion World's MMO 'Rift' chat REST API.")]
 [assembly: AssemblyConfiguration ("")]
-[assembly: AssemblyCompany ("TempusGameIt")]
+[assembly: AssemblyCompany ("Kevin Brill")]
 [assembly: AssemblyProduct ("")]
-[assembly: AssemblyCopyright ("")]
+[assembly: AssemblyCopyright ("Copyright 2015 Kevin Brill")]
 [assembly: AssemblyTrademark ("")]
 [assembly: AssemblyCulture ("")]
 
@@ -24,4 +24,3 @@ using System.Runtime.CompilerServices;
 
 //[assembly: AssemblyDelaySign(false)]
 //[assembly: AssemblyKeyFile("")]
-
