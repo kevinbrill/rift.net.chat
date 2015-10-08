@@ -39,11 +39,11 @@
     <Reference Include="RestSharp">
       <HintPath>..\packages\RestSharp.105.2.3\lib\net45\RestSharp.dll</HintPath>
     </Reference>
-    <Reference Include="rift.net">
-      <HintPath>..\packages\rift.net.1.5.5759.14462\lib\net45\rift.net.dll</HintPath>
-    </Reference>
     <Reference Include="nunit.framework">
       <HintPath>..\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="rift.net">
+      <HintPath>..\packages\rift.net.1.6.0\lib\net45\rift.net.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -57,9 +57,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\rift.net.chat\rift.net.chat.csproj">
+    <ProjectReference Include="..\rift.net.chat.Net45.chat\rift.net.chat.Net45.csproj">
       <Project>{A6611CE7-FB58-4B27-8F10-C299D57187F5}</Project>
-      <Name>rift.net.chat</Name>
+      <Name>rift.net.chat.Net45</Name>
     </ProjectReference>
   </ItemGroup>
 </Project>

@@ -9,16 +9,14 @@ namespace rift.net.chat
 		{
 			object parsedObject = null;
 
-			//System.Diagnostics.Debug.WriteLine (jsonString);
-
 			// Parse the contents into JSON
-			dynamic json = SimpleJson.DeserializeObject( jsonString );			
+			JsonObject json = SimpleJson.DeserializeObject<JsonObject>( jsonString );
 
 			// Get the type
-			string type = json["type"];
+			string type = json["type"].ToString();
 
 			// Get the value
-			JsonObject value = json["value"];
+			string value = json["value"].ToString();
 
 			switch (type) {
 			case "Begin":
@@ -44,23 +42,23 @@ namespace rift.net.chat
 			return parsedObject;
 		}
 
-		private BeginData ParseBeginMessage(JsonObject jsonObject)
+		private BeginData ParseBeginMessage(string jsonObject)
 		{
-			return SimpleJson.DeserializeObject<BeginData> (jsonObject.ToString());
+			return SimpleJson.DeserializeObject<BeginData> (jsonObject);
 		}
 
-		private LoginLogoutData ParseLoginLogOutMessage( JsonObject jsonObject, bool isLoggingIn )
+		private LoginLogoutData ParseLoginLogOutMessage( string jsonObject, bool isLoggingIn )
 		{
-			var data = SimpleJson.DeserializeObject<LoginLogoutData> (jsonObject.ToString());
+			var data = SimpleJson.DeserializeObject<LoginLogoutData> (jsonObject);
 
 			data.login = isLoggingIn;
 
 			return data;
 		}
 
-		private ChatData ParseChat( JsonObject jsonObject, ChatChannel chatChannel)
+		private ChatData ParseChat( string jsonObject, ChatChannel chatChannel)
 		{
-		    var data = SimpleJson.DeserializeObject<ChatData>(jsonObject.ToString());
+		    var data = SimpleJson.DeserializeObject<ChatData>(jsonObject);
 
 		    data.ChatChannel = chatChannel;
 

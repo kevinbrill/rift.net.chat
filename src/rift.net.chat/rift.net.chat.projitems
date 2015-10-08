@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{6EECEE7A-8855-4D05-82B6-B816650F19DE}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>rift.net.chat</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Action.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Location.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Message.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Sender.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\StateAction.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Properties\AssemblyInfo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)rest\BeginData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)rest\ChatChannel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)rest\ChatData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)rest\LoginLogoutData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ChatMessageParser.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)RiftChatClient.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)rest\MessageData.cs" />
+  </ItemGroup>
+</Project>

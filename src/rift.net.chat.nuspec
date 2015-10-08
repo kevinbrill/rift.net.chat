@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <id>rift.net.chat</id>
+    <version>$version$</version>
+    <title>rift.net.chat</title>
+    <authors>Kevin Brill</authors>
+    <owners>Kevin Brill</owners>
+    <licenseUrl>http://www.gnu.org/licenses/gpl-2.0.html</licenseUrl>
+    <projectUrl>http://github.com/kevinbrill/rift.net</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A .net wrapper for Trion World's MMO 'Rift' chat REST API.</description>
+    <releaseNotes>Included support for both mono/net45 as well as Xamarin iOS</releaseNotes>
+    <copyright>Copyright 2015 Kevin Brill</copyright>
+    <tags>Gaming MMO</tags>
+    <dependencies>
+    	<dependency id="AutoMapper" version="4.0" />
+    	<dependency id="RestSharp" version="105.0" />
+    	<dependency id="rift.net" version="1.6" />
+    </dependencies>
+  </metadata>
+<files>
+	<file src="rift.net.chat.Net45/bin/Release/rift.net.chat.dll" target="lib\net45" />
+	<file src="rift.net.chat.iOS/bin/Release/rift.net.chat.dll" target="lib\Xamarin.iOS10" />
+</files>
+</package>

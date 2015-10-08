@@ -1,8 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "rift.net.chat", "rift.net.chat\rift.net.chat.csproj", "{A6611CE7-FB58-4B27-8F10-C299D57187F5}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "rift.net.chat.tests", "rift.net.chat.tests\rift.net.chat.tests.csproj", "{078FC996-6904-4DAD-8807-0F1A76BE9CA2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{AFB2254C-29DC-4CEF-A25B-382830939AE7}"
@@ -11,6 +9,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{AFB225
 		.nuget\NuGet.exe = .nuget\NuGet.exe
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "rift.net.chat", "rift.net.chat\rift.net.chat.shproj", "{6EECEE7A-8855-4D05-82B6-B816650F19DE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "rift.net.chat.iOS", "rift.net.chat.iOS\rift.net.chat.iOS.csproj", "{E0E5FF77-2593-4D3E-B2B2-7DAF7BC07214}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A76F34CA-9A9C-4CCB-A541-19368A4C4F3D}"
+	ProjectSection(SolutionItems) = preProject
+		rift.net.chat.nuspec = rift.net.chat.nuspec
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "rift.net.chat.Net45", "rift.net.chat.Net45.chat\rift.net.chat.Net45.csproj", "{A6611CE7-FB58-4B27-8F10-C299D57187F5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,6 +35,10 @@ Global
 		{A6611CE7-FB58-4B27-8F10-C299D57187F5}.Debug|x86.Build.0 = Debug|Any CPU
 		{A6611CE7-FB58-4B27-8F10-C299D57187F5}.Release|x86.ActiveCfg = Release|Any CPU
 		{A6611CE7-FB58-4B27-8F10-C299D57187F5}.Release|x86.Build.0 = Release|Any CPU
+		{E0E5FF77-2593-4D3E-B2B2-7DAF7BC07214}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E0E5FF77-2593-4D3E-B2B2-7DAF7BC07214}.Debug|x86.Build.0 = Debug|Any CPU
+		{E0E5FF77-2593-4D3E-B2B2-7DAF7BC07214}.Release|x86.ActiveCfg = Release|Any CPU
+		{E0E5FF77-2593-4D3E-B2B2-7DAF7BC07214}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 	EndGlobalSection

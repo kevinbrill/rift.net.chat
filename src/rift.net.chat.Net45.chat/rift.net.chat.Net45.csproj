@@ -13,7 +13,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug</OutputPath>
+    <OutputPath>..\rift.net.chat.Net45\bin\Debug</OutputPath>
     <DefineConstants>DEBUG;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -22,7 +22,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>full</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin\Release</OutputPath>
+    <OutputPath>..\rift.net.chat.Net45\bin\Release</OutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
@@ -41,9 +41,6 @@
     <Reference Include="log4net">
       <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
     </Reference>
-    <Reference Include="rift.net">
-      <HintPath>..\packages\rift.net.1.5.5759.14462\lib\net45\rift.net.dll</HintPath>
-    </Reference>
     <Reference Include="AutoMapper">
       <HintPath>..\packages\AutoMapper.4.0.4\lib\net45\AutoMapper.dll</HintPath>
       <Private>False</Private>
@@ -52,30 +49,12 @@
       <HintPath>..\packages\RestSharp.105.2.3\lib\net45\RestSharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="rift.net">
+      <HintPath>..\packages\rift.net.1.6.0\lib\net45\rift.net.dll</HintPath>
+    </Reference>
   </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ChatMessageParser.cs" />
-    <Compile Include="RiftChatClient.cs" />
-    <Compile Include="rest\BeginData.cs" />
-    <Compile Include="rest\ChatChannel.cs" />
-    <Compile Include="rest\ChatData.cs" />
-    <Compile Include="rest\LoginLogoutData.cs" />
-    <Compile Include="Models\Action.cs" />
-    <Compile Include="Models\Location.cs" />
-    <Compile Include="Models\Message.cs" />
-    <Compile Include="Models\Sender.cs" />
-    <Compile Include="Models\StateAction.cs" />
-  </ItemGroup>
+  <Import Project="..\rift.net.chat\rift.net.chat.projitems" Label="Shared" Condition="Exists('..\rift.net.chat\rift.net.chat.projitems')" />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <ItemGroup>
-    <Folder Include="Models\" />
-    <Folder Include="rest\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
-    <None Include="rift.net.chat.nuspec" />
-  </ItemGroup>
   <ProjectExtensions>
     <MonoDevelop>
       <Properties>
@@ -85,4 +64,7 @@
       </Properties>
     </MonoDevelop>
   </ProjectExtensions>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
 </Project>
