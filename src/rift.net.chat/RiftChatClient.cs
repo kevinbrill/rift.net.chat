@@ -3,7 +3,6 @@ using rift.net.Models;
 using RestSharp;
 using System.Net;
 using System.IO;
-using AutoMapper;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -33,11 +32,6 @@ namespace rift.net.chat
 
 		static RiftChatClient()
 		{
-			Mapper.CreateMap<ChatData, Message> ()
-				.ForMember (x => x.Id, y => y.MapFrom (src => src.messageId))
-				.ForMember (x => x.Sender, y => y.MapFrom (src => new Sender{ Id = src.senderId, Name = src.senderName }))
-				.ForMember (x => x.Text, y => y.MapFrom (src => src.message))
-				.ForMember (x => x.ReceiveDateTime, y => y.MapFrom (src => new DateTime (1970, 1, 1, 0, 0, 0, 0, System.DateTimeKind.Utc).AddSeconds (src.messageTime).ToLocalTime ()));
 		}
 
 		public RiftChatClient (Session session, Character character) : base(session)
@@ -69,7 +63,9 @@ namespace rift.net.chat
 			var request = CreateRequest ("/chat/list");
 			request.AddQueryParameter ("characterId", character.Id);
 
-			return ExecuteAndWrap<List<ChatData>, List<Message>> (request);
+			var chatData = Execute<List<ChatData>> (request);
+
+			return MapChatData (chatData);
 		}
 
 		public List<Message> ListGuildChatHistory()
@@ -77,7 +73,9 @@ namespace rift.net.chat
 			var request = CreateRequest ("/guild/listChat");
 			request.AddQueryParameter ("characterId", character.Id);
 
-			return ExecuteAndWrap<List<ChatData>, List<Message>> (request);
+			var chatData = Execute<List<ChatData>> (request);
+
+			return MapChatData (chatData);
 		}
 
 		public bool SendGuildMessage( string message )
@@ -176,7 +174,7 @@ namespace rift.net.chat
 
 		private void HandleMessage(ChatData data)
 		{
-			var message = Mapper.Map<ChatData, Message> (data);
+			var message = MapChatData(data);
 
 			switch (data.ChatChannel)
 			{
@@ -262,6 +260,22 @@ namespace rift.net.chat
 				if (Disconnected != null)
 					Disconnected(this, new EventArgs());
 			}		
+		}
+
+		private List<Message> MapChatData( List<ChatData> chatData ) 
+		{
+			return chatData.Select (MapChatData).ToList ();
+		}
+
+		private Message MapChatData( ChatData chatData )
+		{
+			return new Message {
+				Id = chatData.messageId,
+				Sender = new Sender { Id = chatData.senderId, Name = chatData.senderName },
+				Text = chatData.message,
+				RecipientId = chatData.recipientId,
+				ReceiveDateTime = new DateTime (1970, 1, 1, 0, 0, 0, 0, System.DateTimeKind.Utc).AddSeconds (chatData.messageTime).ToLocalTime ()
+			};
 		}
 	}
 }

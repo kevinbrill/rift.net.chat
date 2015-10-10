@@ -30,9 +30,6 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
-    <Reference Include="AutoMapper">
-      <HintPath>..\packages\AutoMapper.4.0.4\lib\net45\AutoMapper.dll</HintPath>
-    </Reference>
     <Reference Include="mscorlib" />
     <Reference Include="System.Core" />
     <Reference Include="Microsoft.CSharp" />
@@ -43,7 +40,7 @@
       <HintPath>..\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="rift.net">
-      <HintPath>..\packages\rift.net.1.6.0\lib\net45\rift.net.dll</HintPath>
+      <HintPath>..\packages\rift.net.1.7.0\lib\net45\rift.net.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

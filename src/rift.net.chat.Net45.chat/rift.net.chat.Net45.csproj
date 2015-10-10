@@ -41,16 +41,12 @@
     <Reference Include="log4net">
       <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
     </Reference>
-    <Reference Include="AutoMapper">
-      <HintPath>..\packages\AutoMapper.4.0.4\lib\net45\AutoMapper.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="RestSharp">
       <HintPath>..\packages\RestSharp.105.2.3\lib\net45\RestSharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="rift.net">
-      <HintPath>..\packages\rift.net.1.6.0\lib\net45\rift.net.dll</HintPath>
+      <HintPath>..\packages\rift.net.1.7.0\lib\net45\rift.net.dll</HintPath>
     </Reference>
   </ItemGroup>
   <Import Project="..\rift.net.chat\rift.net.chat.projitems" Label="Shared" Condition="Exists('..\rift.net.chat\rift.net.chat.projitems')" />
