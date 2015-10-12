@@ -21,6 +21,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "rift.net.chat.Net45", "rift.net.chat.Net45.chat\rift.net.chat.Net45.csproj", "{A6611CE7-FB58-4B27-8F10-C299D57187F5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "rift.net.chat.Android", "rift.net.chat.Android\rift.net.chat.Android.csproj", "{8912D60D-AE7B-474D-995C-70663721830E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -31,6 +33,10 @@ Global
 		{078FC996-6904-4DAD-8807-0F1A76BE9CA2}.Debug|x86.Build.0 = Debug|Any CPU
 		{078FC996-6904-4DAD-8807-0F1A76BE9CA2}.Release|x86.ActiveCfg = Release|Any CPU
 		{078FC996-6904-4DAD-8807-0F1A76BE9CA2}.Release|x86.Build.0 = Release|Any CPU
+		{8912D60D-AE7B-474D-995C-70663721830E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{8912D60D-AE7B-474D-995C-70663721830E}.Debug|x86.Build.0 = Debug|Any CPU
+		{8912D60D-AE7B-474D-995C-70663721830E}.Release|x86.ActiveCfg = Release|Any CPU
+		{8912D60D-AE7B-474D-995C-70663721830E}.Release|x86.Build.0 = Release|Any CPU
 		{A6611CE7-FB58-4B27-8F10-C299D57187F5}.Debug|x86.ActiveCfg = Debug|Any CPU
 		{A6611CE7-FB58-4B27-8F10-C299D57187F5}.Debug|x86.Build.0 = Debug|Any CPU
 		{A6611CE7-FB58-4B27-8F10-C299D57187F5}.Release|x86.ActiveCfg = Release|Any CPU

@@ -46,7 +46,7 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="rift.net">
-      <HintPath>..\packages\rift.net.1.7.0\lib\net45\rift.net.dll</HintPath>
+      <HintPath>..\packages\rift.net.1.8.0\lib\net45\rift.net.dll</HintPath>
     </Reference>
   </ItemGroup>
   <Import Project="..\rift.net.chat\rift.net.chat.projitems" Label="Shared" Condition="Exists('..\rift.net.chat\rift.net.chat.projitems')" />
