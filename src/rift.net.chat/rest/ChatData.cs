@@ -16,6 +16,8 @@ namespace rift.net.chat.rest
 
 		public string message { get; set; }
 
+		public int officer { get; set; }
+
 		public ChatChannel ChatChannel { get; set; }
 	}
 }

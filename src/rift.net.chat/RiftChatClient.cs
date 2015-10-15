@@ -73,7 +73,17 @@ namespace rift.net.chat
 			var request = CreateRequest ("/guild/listChat");
 			request.AddQueryParameter ("characterId", character.Id);
 
-			var chatData = Execute<List<ChatData>> (request);
+			var chatData = Execute<List<ChatData>> (request).Where (x => x.officer == 0).ToList ();
+
+			return MapChatData (chatData);
+		}
+
+		public List<Message> ListGuildOfficerChatHistory()
+		{
+			var request = CreateRequest ("/guild/listChat");
+			request.AddQueryParameter ("characterId", character.Id);
+
+			var chatData = Execute<List<ChatData>> (request).Where (x => x.officer != 0).ToList ();
 
 			return MapChatData (chatData);
 		}
@@ -82,6 +92,18 @@ namespace rift.net.chat
 		{
 			var request = CreateRequest ("/guild/addChat", Method.GET );
 			request.AddQueryParameter ("characterId", character.Id);
+			request.AddQueryParameter ("message", message);
+
+			var response = Client.Execute (request);
+
+			return (response.ResponseStatus == ResponseStatus.Completed && response.StatusCode == HttpStatusCode.OK);
+		}
+
+		public bool SendOfficerMessage( string message )
+		{
+			var request = CreateRequest ("/guild/addChat", Method.GET );
+			request.AddQueryParameter ("characterId", character.Id);
+			request.AddQueryParameter ("office", "true");
 			request.AddQueryParameter ("message", message);
 
 			var response = Client.Execute (request);

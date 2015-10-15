@@ -63,6 +63,19 @@ namespace rift.net.chat.tests
 			Assert.That (chatHistory, Is.Not.Null.And.Not.Empty);
 			Assert.That (chatHistory.All (x => x.RecipientId == character.Guild.Id), Is.True);
 		}
+
+		[Test()]
+		public void Verify_That_Character_Guild_Has_Officer_Chat_History()
+		{
+			Assume.That (character, Is.Not.Null);
+			Assume.That (character.Guild, Is.Not.Null, "The provided character is not a member of a guild");
+			Assume.That (character.Guild.ChatPermissions.CanTalkInOfficer, Is.True, "The provided character is not an officer in a guild");
+
+			var chatHistory = client.ListGuildOfficerChatHistory ();
+
+			Assert.That (chatHistory, Is.Not.Null.And.Not.Empty);
+			Assert.That (chatHistory.All (x => x.RecipientId == character.Guild.Id), Is.True);
+		}
 	}
 }
 
