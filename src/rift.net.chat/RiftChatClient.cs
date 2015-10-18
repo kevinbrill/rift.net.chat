@@ -82,6 +82,7 @@ namespace rift.net.chat
 		{
 			var request = CreateRequest ("/guild/listChat");
 			request.AddQueryParameter ("characterId", character.Id);
+			request.AddQueryParameter ("officer", "true");
 
 			var chatData = Execute<List<ChatData>> (request).Where (x => x.officer != 0).ToList ();
 
@@ -103,7 +104,7 @@ namespace rift.net.chat
 		{
 			var request = CreateRequest ("/guild/addChat", Method.GET );
 			request.AddQueryParameter ("characterId", character.Id);
-			request.AddQueryParameter ("office", "true");
+			request.AddQueryParameter ("officer", "true");
 			request.AddQueryParameter ("message", message);
 
 			var response = Client.Execute (request);

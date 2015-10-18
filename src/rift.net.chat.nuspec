@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>rift.net.chat</id>
-    <version>1.3.5-beta</version>
+    <version>1.3.6-beta</version>
     <title>rift.net.chat</title>
     <authors>Kevin Brill</authors>
     <owners>Kevin Brill</owners>
@@ -10,12 +10,12 @@
     <projectUrl>http://github.com/kevinbrill/rift.net</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>A .net wrapper for Trion World's MMO 'Rift' chat REST API.</description>
-    <releaseNotes>Added Android support</releaseNotes>
+    <releaseNotes>Updating officer channel support</releaseNotes>
     <copyright>Copyright 2015 Kevin Brill</copyright>
     <tags>Gaming MMO</tags>
     <dependencies>
     	<dependency id="RestSharp" version="105.2.3" />
-    	<dependency id="rift.net" version="1.7" />
+    	<dependency id="rift.net" version="1.8" />
     </dependencies>
   </metadata>
 <files>
